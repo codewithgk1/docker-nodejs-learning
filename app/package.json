@@ -1,0 +1,22 @@
+{
+  "name": "lightweight-names-api",
+  "version": "1.0.0",
+  "description": "A lightweight Node.js API for storing and retrieving names",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon index.js --watch ./ -e js,json",
+    "prod": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+} 
