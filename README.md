@@ -9,13 +9,36 @@ docker-nodejs-learning/
 ├── app/                    # Lightweight Node.js API
 │   ├── index.js           # API implementation
 │   ├── package.json       # Node.js dependencies
-│   └── data.json         # File-based storage
+│   └── data.json          # File-based storage
 └── examples/              # Docker examples and configurations
+    └── v1-basic/         # Basic Docker example
+        └── Dockerfile    # Docker configuration
 ```
 
 ## API Application (/app)
 
 A lightweight Node.js API for storing and retrieving names using file-based storage.
+
+### Running with Docker (v1-basic example)
+
+1. Navigate to the v1-basic example directory:
+```bash
+cd examples/v1-basic
+```
+
+2. Build the Docker image:
+```bash
+docker build -t nodejs-app .
+```
+
+3. Run the container:
+```bash
+docker run -p 3001:3000 nodejs-app
+```
+
+The application will be accessible at http://localhost:3001 (port 3000 inside container is mapped to port 3001 on your machine)
+
+### Running Locally (without Docker)
 
 ### Requirements
 

@@ -11,10 +11,18 @@ const fs = require('fs');
 const path = require('path');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
 const dataFile = path.join(__dirname, 'data.json');
+
+// Enable CORS for all routes
+app.use(cors({
+    origin: '*',  // Allow all origins for development
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
+}));
 
 // Swagger definition
 const swaggerOptions = {
@@ -27,12 +35,12 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: `http://localhost:${port}`,
+                url: `http://localhost:3000`,  // Updated to match the exposed port
                 description: 'Development server',
             },
         ],
     },
-    apis: [path.join(__dirname, 'index.js')], // Updated path to use __dirname
+    apis: [path.join(__dirname, 'index.js')],
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
