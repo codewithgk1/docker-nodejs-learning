@@ -20,7 +20,7 @@ const dataFile = path.join(__dirname, 'data.json');
 
 // Parse CORS configuration from environment variables
 const corsOrigins = process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ['http://localhost:3000'];
-const corsMethods = process.env.CORS_METHODS ? process.env.CORS_METHODS.split(',') : ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'];
+const corsMethods = process.env.CORS_METHODS ? process.env.CORS_METHODS.split(',') : ['GET', 'POST', 'OPTIONS'];
 const corsAllowedHeaders = process.env.CORS_ALLOWED_HEADERS ? process.env.CORS_ALLOWED_HEADERS.split(',') : ['Content-Type', 'Authorization', 'Accept'];
 
 // Enable CORS with configuration from environment variables
