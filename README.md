@@ -33,10 +33,10 @@ docker build -t nodejs-app .
 
 3. Run the container:
 ```bash
-docker run -p 3001:3000 nodejs-app
+docker run -p 3000:3000 nodejs-app
 ```
 
-The application will be accessible at http://localhost:3001 (port 3000 inside container is mapped to port 3001 on your machine)
+The application will be accessible at http://localhost:3000 (port 3000 inside container is mapped to port 3000 on your machine)
 
 ### Running Locally (without Docker)
 

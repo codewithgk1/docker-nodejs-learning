@@ -37,7 +37,7 @@ docker run -p 3000:3000 --name container-v1-basic -d image-v1-basic
 ```
 
 This command creates and starts a container with the following options:
-- `-p 3001:3000`: Maps port 3000 inside the container to port 3001 on your host machine
+- `-p 3000:3000`: Maps port 3000 inside the container to port 3000 on your host machine
 - `--name container-v1-basic`: Assigns a name to the container for easy reference
 - `-d`: Runs the container in detached mode (in the background)
 - `image-v1-basic`: Specifies the image to use for creating the container
@@ -107,6 +107,6 @@ Once the container is running, you can access the application at:
 
 ## Notes
 - The application runs on port 3000 inside the container
-- The port is mapped to 3001 on your host machine for access
+- The port is mapped to 3000 on your host machine for access
 - The container runs in detached mode, meaning it runs in the background
 - Use container logs to debug any issues that may arise
