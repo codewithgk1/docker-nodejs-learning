@@ -44,6 +44,22 @@ The application will be accessible at http://localhost:3000 (port 3000 inside co
 
 - Node.js version 20 or higher
 
+### Environment Variables
+
+The application uses environment variables for configuration. To set up:
+
+1. Copy the example environment file:
+```bash
+cp app/.env.example app/.env
+```
+
+2. Update the values in `app/.env` with your configuration.
+
+3. When running with Docker, use the `--env-file` flag:
+```bash
+docker run --env-file ./app/.env -p 3000:3000 nodejs-app
+```
+
 ### Setup and Running the API
 
 1. Navigate to the app directory:
