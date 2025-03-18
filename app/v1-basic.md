@@ -33,7 +33,8 @@ The build process uses the Dockerfile in the current directory to:
 ### 2. Running the Container
 
 ```bash
-docker run -p 3000:3000 --name container-v1-basic -d image-v1-basic
+docker run -p 3000:3000 --env-file .env --name container-v1-basic -d image-v1-basic
+
 ```
 
 This command creates and starts a container with the following options:
@@ -47,6 +48,21 @@ This command creates and starts a container with the following options:
 ### View Running Containers
 ```bash
 docker ps
+```
+
+### Access Container Shell and Check Files
+```bash
+# Enter the container's shell
+docker exec -it container-v1-basic /bin/sh
+
+# Once inside the container, you can use these commands:
+ls          # List files and directories
+pwd         # Show current directory
+cat .env    # View contents of .env file (if it exists)
+env         # View all environment variables
+
+# To exit the container's shell
+exit
 ```
 
 ### Stop the Container
